@@ -49,13 +49,13 @@ supported by the `regex` crate.
 
 ### Text search and log scanning
 
-| Scenario                 |       Ferroni |  Oniguruma |        `regex` |
-| ------------------------ | ------------: | ---------: | -------------: |
-| Literal in 50 KB         |     69.061 ns | 162.050 ns |  **10.003 ns** |
-| No match, 50 KB          |      1.539 us |   9.589 us |   **1.483 us** |
-| No match, 10 KB          |    363.080 ns |   1.915 us | **296.450 ns** |
-| Field extract, 50 KB     |     91.928 ns | 180.720 ns |  **55.472 ns** |
-| Timestamp, 50 KB         |     81.614 ns | 183.390 ns |  **53.293 ns** |
+| Scenario                 |        Ferroni |  Oniguruma |        `regex` |
+| ------------------------ | -------------: | ---------: | -------------: |
+| Literal in 50 KB         |      69.061 ns | 162.050 ns |  **10.003 ns** |
+| No match, 50 KB          |       1.539 us |   9.589 us |   **1.483 us** |
+| No match, 10 KB          |     363.080 ns |   1.915 us | **296.450 ns** |
+| Field extract, 50 KB     |      91.928 ns | 180.720 ns |  **55.472 ns** |
+| Timestamp, 50 KB         |      81.614 ns | 183.390 ns |  **53.293 ns** |
 | RegSet multi-pattern (5) | **103.960 ns** | 399.240 ns |              — |
 
 ### Pattern matching
@@ -74,11 +74,11 @@ supported by the `regex` crate.
 
 ### Compilation
 
-| Pattern       |        Ferroni |      Oniguruma |    `regex` |
-| ------------- | -------------: | -------------: | ---------: |
-| Literal       |     466.740 ns | **455.770 ns** |   2.375 us |
-| Named capture |   **5.142 us** |       5.970 us | 197.430 us |
-| Lookbehind    |       1.077 us | **554.290 ns** |          — |
+| Pattern       |      Ferroni |      Oniguruma |    `regex` |
+| ------------- | -----------: | -------------: | ---------: |
+| Literal       |   466.740 ns | **455.770 ns** |   2.375 us |
+| Named capture | **5.142 us** |       5.970 us | 197.430 us |
+| Lookbehind    |     1.077 us | **554.290 ns** |          — |
 
 ### Scanner with full Shiki TextMate grammars
 
@@ -92,7 +92,7 @@ Full, unmodified grammars from
 | First match, short line       | **325.990 ns** |      26.215 us | **80.4x** |
 | Tokenize full line            |   **7.892 us** |     219.000 us | **27.8x** |
 | **CSS (117 patterns)**        |                |                |           |
-| Compile                       |      24.402 ms |  **19.513 ms** |    0.8x |
+| Compile                       |      24.402 ms |  **19.513 ms** |      0.8x |
 | Tokenize (multi-line)         |   **1.470 ms** |      14.794 ms | **10.1x** |
 | **Rust (81 patterns)**        |                |                |           |
 | Compile                       |     310.260 us | **185.520 us** |     0.60x |

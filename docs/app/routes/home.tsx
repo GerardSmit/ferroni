@@ -274,9 +274,10 @@ function PerfSection() {
 
         <p className="fh-perf-note">
           Measured on 2026-09-07 with the <code>battle_bench</code> reference suite at commit{" "}
-          <code>962ef5a8</code>, on a Mac13,2 (Apple M1 Ultra, 64&nbsp;GB) running macOS 26.5.2. Each
-          factor is the ratio of the two timings shown on its card. Full tables, raw values, and the
-          measurement context are in <Link to="/perf/benchmark-results">Benchmark Results</Link>.
+          <code>962ef5a8</code>, on a Mac13,2 (Apple M1 Ultra, 64&nbsp;GB) running macOS 26.5.2.
+          Each factor is the ratio of the two timings shown on its card. Full tables, raw values,
+          and the measurement context are in{" "}
+          <Link to="/perf/benchmark-results">Benchmark Results</Link>.
         </p>
       </div>
     </section>
